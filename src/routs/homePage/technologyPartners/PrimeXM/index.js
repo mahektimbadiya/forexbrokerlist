@@ -28,13 +28,13 @@ export default function PrimeXM() {
             </div>
             <div className="PrimeXM-button">
                 <button>
-                    <span>
+                    <div className="PrimeXM-span">
                         View Integration
 
-                        <div className="searchbar-right-icon">
+                        <div className="PrimeXM-right-icon">
                             <MoveRight />
                         </div>
-                    </span>
+                    </div>
                 </button>
             </div>
         </div>

@@ -109,14 +109,14 @@
             transition: .3s ease-in-out;
             width: 100%;
 
-            span {
+            .PrimeXM-span {
                 text-align: center;
                 display: contents;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
 
-                .searchbar-right-icon {
+                .PrimeXM-right-icon {
                     background-color: $primary-bg-color;
                     border-radius: 99px;
                     display: flex;
@@ -135,10 +135,10 @@
                 background-color: $primary-bg-color;
                 color: $text-color-black100;
 
-                span {
+                .PrimeXM-span {
 
-                    .searchbar-right-icon {
-                        background-color: #fff;
+                    .PrimeXM-right-icon {
+                        background: #fff;
                     }
                 }
             }
