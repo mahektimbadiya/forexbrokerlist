@@ -1,0 +1,157 @@
+@use "../../sass/main.scss" as *;
+@use "../../sass/theme/theme.scss" as *;
+@use "../../sass/typography/typography.scss" as *;
+
+header {
+    padding: 20px 0;
+    background: #f0f2ec;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    font-family: "Geist", sans-serif;
+    background: rgb(240, 242, 236, 0.5);
+
+    @media (max-width:576px) {
+        padding: 12px 0;
+    }
+
+    .header-section {
+        padding: 0 64px;
+        max-width: 1640px;
+        margin: 0 auto;
+        position: relative;
+
+        @media (max-width:1024px) {
+            padding: 0 20px;
+        }
+
+        @media (max-width:576px) {
+            padding: 0 16px;
+        }
+
+        .header-flex-align {
+            font-size: 14px;
+            line-height: 1.42857;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .header-logo-align {
+                display: flex;
+                row-gap: 4px;
+                column-gap: 8px;
+                align-items: center;
+                flex-direction: row;
+                cursor: pointer;
+
+                a {
+                    max-width: 175px;
+                    width: 100%;
+                    display: block;
+
+                    img {
+                        object-fit: contain;
+                        width: auto;
+                        height: 32px;
+                        max-width: 100%;
+                        display: block;
+                    }
+                }
+            }
+
+            .header-menu-align {
+                padding: 6px;
+                background-color: #ffffff;
+                border-radius: 99px;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+
+                @media (max-width:1024px) {
+                    display: none;
+                }
+
+                a {
+                    outline: none;
+                    color: $text-color-black100;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding: 8px 20px;
+                    border-radius: 99px;
+                    align-items: center;
+                    display: block;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+
+                    &:first-child {
+                        background-color: $primary-bg-color;
+                    }
+
+                    &:hover {
+                        background-color: $primary-bg-color;
+                    }
+                }
+
+                button {
+                    color: $text-color-black100;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding: 8px 20px;
+                    border-radius: 99px;
+                    gap: 4px;
+                    align-items: center;
+                    display: flex;
+                    background-color: transparent;
+                    border: none;
+                    transition: .3s ease-in-out;
+
+                    &:hover {
+                        background-color: $primary-bg-color;
+                    }
+
+                    svg {
+                        opacity: 0.75;
+                        width: 16px;
+                        height: 16px;
+                        display: block;
+                    }
+                }
+            }
+
+            .header-button {
+                display: flex;
+                gap: 12px;
+                justify-content: flex-end;
+                align-items: center;
+                flex-direction: row;
+
+                .header-button-align {
+                    border: transparent;
+                    background-color: $bg-color-black100;
+                    border-radius: 99px;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-align: start;
+                    padding: 10px 28px;
+                    border: 1px solid transparent;
+                    overflow: clip;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+
+                    &:hover {
+                        background-color: $primary-bg-color;
+                        color: $text-color-black100;
+                    }
+                }
+            }
+        }
+    }
+}

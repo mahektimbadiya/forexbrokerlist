@@ -1,0 +1,151 @@
+@use "../../../../sass/main.scss" as *;
+@use "../../../../sass/theme/theme.scss" as *;
+@use "../../../../sass/typography/typography.scss" as *;
+
+.PrimeXM-section {
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #fff;
+    position: relative;
+    transition: .3s ease-in-out;
+
+    .PrimeXM-topLogo {
+        background-color: #f0f2ec;
+        border-radius: 99px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 128px;
+        height: 128px;
+        top: -26px;
+        right: -26px;
+        position: absolute;
+
+        .PrimeXM-topLogo-align {
+            padding: 12px;
+            background-color: #fff;
+            border: .5px solid $border-color-f3;
+            border-radius: 99px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 97px;
+            height: 97px;
+
+            img {
+                object-fit: contain;
+                border-radius: 6px;
+                max-width: 100%;
+                max-height: 100%;
+                display: block;
+            }
+        }
+    }
+
+    span {
+        color: $text-color-black700;
+        @include font-11px;
+        padding: 3px 10px;
+        background-color: $bg-color-f4;
+        border-radius: 99px;
+        width: fit-content;
+        z-index: 10;
+        position: relative;
+    }
+
+    h3 {
+        color: #000;
+        @include font-24;
+        margin: 8px 0 0 0;
+    }
+
+    p {
+        color: $text-color-black700;
+        @include fonr-16;
+        min-height: 48px;
+        margin: 0 0 20px;
+    }
+
+    ul {
+        display: flex;
+        gap: 16px;
+        padding: 0 0 20px 0;
+        flex-direction: column;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: $text-color-black700;
+            @include fonr-16;
+        }
+    }
+
+    .PrimeXM-text {
+        color: $text-color-black700;
+        @include font-14;
+        padding: 6px 10px;
+        background-color: #fff;
+        border: 1px solid #00000014;
+        border-radius: 99px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: #20CE5A;
+        }
+    }
+
+    .PrimeXM-button {
+        padding: 20px 0 0;
+
+        button {
+            @include button-16;
+            transition: .3s ease-in-out;
+            width: 100%;
+
+            span {
+                text-align: center;
+                display: contents;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+
+                .searchbar-right-icon {
+                    background-color: $primary-bg-color;
+                    border-radius: 99px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 28px;
+                    height: 28px;
+
+                    svg {
+                        color: #000;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: $primary-bg-color;
+                color: $text-color-black100;
+
+                span {
+
+                    .searchbar-right-icon {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover{
+        transform: translateY(-8px) scale(1.02);
+    }
+}

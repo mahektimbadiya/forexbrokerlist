@@ -1,0 +1,101 @@
+@use "../../../sass/main.scss" as *;
+@use "../../../sass/theme/theme.scss" as *;
+@use "../../../sass/typography/typography.scss" as *;
+
+.learnForex-section {
+    padding: 50px 0;
+    background-color: $bg-color-black100;
+    overflow: hidden;
+
+    @media (max-width:576px) {
+        padding: 64px 0;
+    }
+
+    .learnForex-conatiner {
+        padding: 0 64px;
+        max-width: 1640px;
+        margin: 0 auto;
+
+        @media (max-width:1024px) {
+            padding: 0 20px;
+        }
+
+        @media (max-width:576px) {
+            padding: 0 16px;
+        }
+
+        .learnForex-flex-align {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width:1024px) {
+                display: block;
+            }
+
+            .learnForex-left-align {
+                max-width: 550px;
+
+                @media (max-width:1024px) {
+                    max-width: 100%;
+                }
+
+                h2 {
+                    color: #fff;
+                    @include heading-42;
+                    margin-bottom: 8px;
+
+                    @media (max-width:576px) {
+                        line-height: 40px;
+                        font-size: 30px;
+                    }
+                }
+
+                p {
+                    color: #ffffffb3;
+                    @include text-18;
+                    margin-bottom: 12px;
+                }
+
+                .learnForex-left-button {
+                    padding-top: 48px;
+
+                    button {
+                        @include button-16-white;
+                        transition: .3s ease-in-out;
+
+                        &:hover{
+                            background-color: $primary-bg-color;
+                        }
+                    }
+                }
+            }
+
+            .learnForex-right-align{
+                max-width: calc(100% - 550px);
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 550px;
+                position: relative;
+
+                @media (max-width:576px) {
+                    padding-top: 20px;
+                    height: auto;
+                    max-width: 100%;
+                }
+
+                .learnForex-right-card-align{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                }
+            }
+        }
+    }
+}

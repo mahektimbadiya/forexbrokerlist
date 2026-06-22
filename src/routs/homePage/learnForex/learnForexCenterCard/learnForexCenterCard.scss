@@ -1,0 +1,169 @@
+@use "../../../../sass/main.scss" as *;
+@use "../../../../sass/theme/theme.scss" as *;
+@use "../../../../sass/typography/typography.scss" as *;
+
+.learnForexCenterCard {
+    width: 380px;
+    padding: 12px;
+    background-color: $bg-color-51;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    // position: absolute;
+    left: 50%;
+    top: 50%;
+
+    .learnForexCard-top-align {
+        margin-bottom: 8px;
+
+        img {
+            object-fit: cover;
+            border-radius: 16px;
+            width: 100%;
+            height: 200px;
+            display: block;
+        }
+    }
+
+    .learnForexCard-bottom-align {
+        padding: 16px;
+        background-color: $bg-color-black100;
+        border-radius: 14.774px;
+        z-index: 20;
+        position: relative;
+
+        .learnForexCard-logo-align {
+            position: absolute;
+            padding: 6px;
+            background-color: #fff;
+            border: 3px solid #ffffff1a;
+            border-radius: 99px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 84px;
+            height: 84px;
+            z-index: 30;
+            right: 16px;
+            top: -42px;
+
+            img {
+                padding: 3px;
+                border: 1px solid;
+                border-radius: 99px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .learnForexCard-text {
+            color: #ffffffb3;
+            @include font-12;
+            padding: 4px 8px;
+            background-color: #ffffff1a;
+            border: 1px solid #ffffff0d;
+            border-radius: 99px;
+            align-items: center;
+            width: fit-content;
+            display: inline-flex;
+            margin-bottom: 4px;
+        }
+
+        h3 {
+            color: #fff;
+            @include font-22;
+            margin-bottom: 4px;
+        }
+
+        p {
+            color: #ffffffb3;
+            @include font-12;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .learnForexCard-reviews {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+
+            .learnForexCard-reviews-align{
+                padding: 6px 12px;
+                border: 0.923px solid #ffffff1f;
+                border-radius: 99px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                flex: 1;
+
+                svg{
+                    color: $text-color-f0;
+                    fill: $text-color-f0;
+                    width: 14px;
+                    height: 14px;
+                    display: block;
+                }
+
+                span{
+                    color: #ffffffb3;
+                    @include font-12;
+                    font-weight: 500;
+                    letter-spacing: 0.3px;
+                }
+
+                &:last-child{
+
+                    svg{
+                        color: $text-color-99;
+                        fill: $text-color-99;
+                    }
+                }
+            }
+        }
+
+        .learnForexCard-button{
+
+            button{
+                outline: transparent;
+                color: $text-color-black100;
+                @include font-14;
+                text-align: start;
+                padding: 8px 20px;
+                background-color: #fff;
+                border: 1px none transparent;
+                border-radius: 99px;
+                overflow: clip;
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                width: 100%;
+                transition: .3s ease-in-out;
+
+                span{
+
+                    .learnForexCard-button-arrow{
+                        background-color: $bg-color-black100;
+                        border-radius: 99px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 28px;
+                        height: 28px;
+
+                        svg{
+                            color: #fff;
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+
+                &:hover{
+                    background-color: $primary-bg-color;
+                }
+            }
+        }
+    }
+}

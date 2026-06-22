@@ -1,0 +1,148 @@
+@use "../../../../sass/main.scss" as *;
+@use "../../../../sass/theme/theme.scss" as *;
+@use "../../../../sass/typography/typography.scss" as *;
+
+.AlgomaticBot-section {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 16px;
+    transition: .3s ease-in-out;
+
+    .AlgomaticBot-image-align {
+        padding: 8px;
+        color: #f0f1ec;
+        border-radius: 12px;
+        height: 290px;
+
+        img {
+            object-fit: cover;
+            border-radius: 12px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .AlgomaticBot-mid-align {
+        padding: 20px 0 16px;
+        // border: 1px solid $border-color-light800;
+        display: grid;
+        grid-template-columns: 87px 1fr;
+        gap: 20px;
+
+        .AlgomaticBot-mid-image-align{
+            background-color: #f2f4f7;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 64px;
+
+            .AlgomaticBot-mid-image{
+                display: flex;
+                justify-content: center;
+                height: 40px;
+
+                img{
+                    padding: 3px;
+                    object-fit: contain;
+                    border: 1px solid transparent;
+                    border-radius: 6px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        div{
+
+            h3{
+                color: $text-color-black100;
+                @include font-20px;
+            }
+
+            p{
+                color: $text-color-black700;
+                @include font-14;
+            }
+        }
+    }
+
+    .AlgomaticBot-content-align{
+        padding-top: 20px;
+
+        .AlgomaticBot-info{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding-bottom: 8px;
+
+            svg{
+                color: #A8DD15;
+                fill: #A8DD15;
+                width: 18px;
+                height: 18px;
+            }
+
+            p{
+                color: $text-color-black700;
+                @include fonr-16;
+
+                span{
+                    color: $text-color-black100;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .AlgomaticBot-button{
+            padding-top: 16px;
+
+            button{
+                outline: transparent;
+                color: $text-color-black100;
+                @include fonr-16;
+                text-align: center;
+                padding: 10px 20px;
+                background-color: #f0f1ec;
+                border: 1px solid transparent;
+                border-radius: 99px;
+                overflow: clip;
+                display: flex;
+                gap: 8px;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                width: 100%;
+                transition: .3s ease-in-out;
+
+                span{
+
+                    .AlgomaticBot-arrow-button{
+                        background-color: $bg-color-black100;
+                        border-radius: 99px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 28px;
+                        height: 28px;
+
+                        svg{
+                            width: 16px;
+                            height: 16px;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &:hover{
+                    background-color: $primary-bg-color;
+                }
+            }
+        }
+    }
+
+    &:hover{
+        transform: translateY(-10px);
+    }
+}

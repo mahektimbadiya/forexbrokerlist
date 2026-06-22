@@ -1,0 +1,203 @@
+@use "../../../sass/main.scss" as *;
+@use "../../../sass/theme/theme.scss" as *;
+@use "../../../sass/typography/typography.scss" as *;
+
+.premiumBrokers-section {
+    padding: 100px 0;
+    overflow: hidden;
+
+    @media (max-width:576px) {
+        padding-top: 64px;
+    }
+
+    .premiumBrokers-top-conatiner {
+        padding: 0 64px;
+        max-width: 1640px;
+        margin: 0 auto;
+
+        @media (max-width:1024px) {
+            padding: 0 20px;
+        }
+
+        @media (max-width:576px) {
+            padding: 0;
+        }
+
+        .premiumBrokers-header {
+            padding-bottom: 48px;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+
+            @media (max-width:576px) {
+                padding: 0 16px 32px;
+                display: block;
+            }
+
+            .premiumBrokers-header-content {
+
+                h2 {
+                    color: $text-color-black100;
+                    @include heading-42;
+
+                    @media (max-width:576px) {
+                        line-height: 40px;
+                        font-size: 30px;
+                    }
+                }
+
+                p {
+                    color: #1a1a1ab3;
+                    @include text-18;
+                    max-width: 885px;
+
+                    @media (max-width:576px) {
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+
+            .premiumBrokers-header-button{
+                padding-top: 16px;
+            }
+        }
+
+        .premiumBrokers-grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(7, 1fr);
+
+            @media (max-width:576px) {
+                scrollbar-width: none;
+                padding: 0 16px;
+                overflow: auto;
+                display: flex;
+            }
+
+            @media (max-width:1024px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .premiumBrokers-grid-items {
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid $border-color-e4;
+                border-radius: 12px;
+                cursor: pointer;
+                height: 100%;
+                transition: .3s ease-in-out;
+
+                @media (max-width:576px) {
+                    min-width: 280px;
+                    max-width: 280px;
+                    width: 280px;
+                }
+
+                h3 {
+                    @include text-18;
+                    font-weight: 600;
+                    margin-bottom: 4px;
+                    color: #000;
+                }
+
+                p {
+                    color: #1a1a1ab3;
+                    @include font-14;
+                }
+
+                &:hover {
+                    transform: translateY(-5px);
+                    border-color: $primary-border-color;
+                }
+            }
+        }
+    }
+
+    .premiumBrokers-bottom-align {
+        width: 100%;
+        position: relative;
+        margin-top: 70px;
+        overflow: hidden;
+
+        .premiumBrokers-marquee-align {
+            width: 100%;
+
+            .premiumBrokers-marquee {
+                display: flex;
+                padding: 16px 0;
+                animation: marquee 30s infinite;
+
+                .premiumBrokers-flex-items {
+                    margin: 0 12px;
+                    overflow: hidden;
+                    min-width: 240px;
+                    color: $text-color-1f;
+                    border: 1px solid #e4e4e4;
+                    background-color: #fff;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+
+                    .premiumBrokers-card-top {
+                        background-color: $bg-color-black100;
+                        display: flex;
+                        height: 36px;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 8px 16px;
+                        transition: .3s ease-in-out;
+
+                        span {
+                            opacity: 0.9;
+                            text-transform: uppercase;
+                            color: #fff;
+                            @include font-14;
+                            letter-spacing: 1.4px;
+                            font-weight: 700;
+                            transition: .3s ease-in-out;
+                        }
+                    }
+
+                    .premiumBrokers-card-image {
+                        padding: 24px;
+                        background-color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 90px;
+
+                        img {
+                            object-fit: contain;
+                            max-width: 140px;
+                            max-height: 50px;
+                            display: block;
+                        }
+                    }
+
+                    &:hover {
+                        border: 1px solid $primary-border-color;
+
+                        .premiumBrokers-card-top {
+                            background-color: $primary-bg-color;
+
+                            span {
+                                color: $text-color-black100;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

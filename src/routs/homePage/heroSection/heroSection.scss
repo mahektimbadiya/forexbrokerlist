@@ -1,0 +1,296 @@
+@use "../../../sass/main.scss" as *;
+@use "../../../sass/theme/theme.scss" as *;
+@use "../../../sass/typography/typography.scss" as *;
+
+.heroSection {
+    overflow: hidden;
+    min-height: calc(100dvh - 50px);
+    margin-bottom: 16px;
+    position: relative;
+
+    @media (max-width:576px) {
+        padding-bottom: 64px;
+        min-height: auto;
+    }
+
+    .heroSection-container {
+        padding: 0 64px;
+        max-width: 1640px;
+        margin: 0 auto;
+        background-color: $bg-color-f0;
+
+        @media (max-width:1024px) {
+            padding: 0 20px;
+        }
+
+        @media (max-width:576px) {
+            padding: 0 16px;
+        }
+
+        .heroSection-content-section {
+            position: relative;
+
+            .heroSection-content {
+                padding-top: 150px;
+                max-width: 700px;
+
+                @media (max-width:1024px) {
+                    padding-top: 160px;
+                }
+
+                @media (max-width:576px) {
+                    padding-top: 120px;
+                }
+
+                .heroSection-top-content {
+                    padding: 6px 16px 6px 8px;
+                    background-color: #fff;
+                    border-radius: 99px;
+                    display: flex;
+                    gap: 4px;
+                    align-items: center;
+                    width: fit-content;
+
+                    span {
+
+                        &:first-child {
+                            color: #fff;
+                            font-size: 14px;
+                            font-weight: 400;
+                            padding-block: 3px;
+                            padding-inline: 10px;
+                            background-color: $bg-color-black100;
+                            border-radius: 99px;
+                            line-height: 20px;
+                        }
+
+                        &:last-child {
+                            color: #1a1a1ab3;
+                            font-size: 16px;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 1.42857;
+
+                            @media (max-width:1024px) {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+                h1 {
+                    @include heading-1-60;
+                    margin: 12px 0;
+
+                    @media (max-width:576px) {
+                        line-height: 45px;
+                        font-size: 36px;
+                    }
+                }
+
+                p {
+                    color: $text-color-black700;
+                    max-width: 710px;
+                    margin-bottom: 36px;
+                    z-index: 9;
+                    position: relative;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1.5556;
+
+                    @media (max-width:576px) {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .heroSection-searchbar-section {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+
+                    button {
+                        @include button-16;
+                        transition: .3s ease-in-out;
+
+                        span {
+                            text-align: center;
+                            display: contents;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+
+                            .searchbar-right-icon {
+                                background-color: $primary-bg-color;
+                                border-radius: 99px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 28px;
+                                height: 28px;
+
+                                svg {
+                                    color: #000;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            background-color: $primary-bg-color;
+                            color: $text-color-black100;
+
+                            span {
+
+                                .searchbar-right-icon {
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                    }
+
+                    .search-box {
+                        width: auto;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        gap: 20px;
+
+                        .searchbar-box-align {
+                            width: 320px;
+                            position: relative;
+
+                            .searchbar-box {
+                                padding: 8px 12px;
+                                background-color: transparent;
+                                border: 1px solid #1a1a1a33;
+                                border-radius: 99px;
+                                gap: 8px;
+                                display: flex;
+                                align-items: center;
+                                cursor: text;
+                                width: 100%;
+
+                                input {
+                                    outline: none;
+                                    border: none;
+                                    color: $text-color-black100;
+                                    font-size: 14px;
+                                    line-height: 1.428;
+                                    background-color: transparent;
+                                    width: 100%;
+                                    padding: 0;
+
+                                    &::placeholder {
+                                        color: #1a1a1a33;
+                                    }
+                                }
+
+                                svg {
+                                    padding: 6px;
+                                    background-color: $bg-color-black100;
+                                    border-radius: 99px;
+                                    flex-shrink: 0;
+                                    width: 32px;
+                                    height: 32px;
+                                    display: block;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .heroSection-bottom {
+                    padding-top: 50px;
+                    align-items: center;
+                    display: flex;
+                    z-index: 9;
+                    position: relative;
+
+                    @media (max-width:576px) {
+                        padding-top: 30px;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 20px;
+                    }
+
+                    .heroSection-bottom-items {
+                        border-right: 1px solid $border-color-d3;
+                        padding: 0 30px;
+
+                        @media (max-width:576px) {
+                            padding: 0 20px;
+                            border: none;
+                        }
+
+                        &:first-child {
+                            padding-left: 0;
+
+                            @media (max-width:576px) {
+                                padding-left: 20px;
+                            }
+                        }
+
+                        &:last-child {
+                            padding-right: 0;
+                            border: none;
+
+                            @media (max-width:576px) {
+                                padding-right: 20px;
+                            }
+                        }
+
+
+                        h2 {
+                            @include heading-40;
+                            text-align: center;
+
+                            @media (max-width:576px) {
+                                font-size: 30px;
+                                line-height: 1.5;
+                            }
+                        }
+
+                        p {
+                            margin: 0;
+
+                            @media (max-width:576px) {
+                                font-size: 16px;
+                                line-height: 1.5;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .heroSection-Image {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @media (max-width:1024px) {
+            padding-top: 40px;
+            justify-content: center;
+            display: flex;
+            position: relative;
+        }
+
+        @media (max-width:576px) {
+            display: none;
+        }
+
+        img {
+            max-width: 900px;
+            display: block;
+            height: auto;
+
+            @media (max-width:1024px) {
+                max-width: 500px;
+            }
+        }
+    }
+}

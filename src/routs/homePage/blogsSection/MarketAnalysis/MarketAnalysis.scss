@@ -1,0 +1,91 @@
+@use "../../../../sass/main.scss" as *;
+@use "../../../../sass/theme/theme.scss" as *;
+@use "../../../../sass/typography/typography.scss" as *;
+
+.MarketAnalysis-section{
+    padding: 14px;
+    background-color: #fff;
+    border: 1px solid #0000001a;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    .MarketAnalysis-image-align{
+        border-radius: 12px;
+        overflow: hidden;
+
+        img{
+            object-fit: cover;
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+        }
+    }
+
+    .MarketAnalysis-content{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        .MarketAnalysis-content-header{
+            padding-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .MarketAnalysis-content-header-title{
+                color: $text-color-black800;
+                @include font-14;
+                font-weight: 600;
+                padding: 6px 12px;
+                background-color: #f0f1ec;
+                border-radius: 6px;
+            }
+
+            .MarketAnalysis-date{
+                display: flex;
+                gap: 8px;
+                align-items: center;
+
+                svg{
+                    width: 18px;
+                    height: 18px;
+                    color: $text-color-black700;
+                }
+
+                p{
+                    color: $text-color-black700;
+                    @include font-14;
+                }
+            }
+        }
+
+        h2{
+            color: $text-color-black200;
+            @include font-20px;
+            font-weight: 600;
+            line-height: 1.25;
+            margin-bottom: 8px;
+            transition: .3s ease-in-out;
+
+            &:hover{
+                color: $primary-text-color;
+            }
+        }
+
+        p{
+            color: $text-color-black700;
+            @include fonr-16;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+    }
+
+    &:hover{
+        transform: translateY(-10px) scale(1.02);
+    }
+}

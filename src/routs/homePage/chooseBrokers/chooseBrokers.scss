@@ -1,0 +1,129 @@
+@use "../../../sass/main.scss" as *;
+@use "../../../sass/theme/theme.scss" as *;
+@use "../../../sass/typography/typography.scss" as *;
+
+.chooseBrokers-section {
+    padding: 0 64px;
+    max-width: 1640px;
+    margin: 0 auto;
+
+    @media (max-width:1024px) {
+        padding: 0 20px;
+    }
+
+    @media (max-width:576px) {
+        padding: 0;
+    }
+
+    .chooseBrokers-container {
+        padding: 0 100px;
+        border-radius: 24px;
+        background-image: url(../../../assets/logo/black-layer.png);
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+
+        @media (max-width:1024px) {
+            padding: 0 40px;
+        }
+
+        @media (max-width:576px) {
+            padding: 0 20px;
+            border-radius: 0;
+        }
+
+        .chooseBrokers-flex-container {
+            display: grid;
+            grid-template-columns: 1fr 593px;
+            align-items: flex-end;
+
+            @media (max-width:1024px) {
+                grid-template-columns: 1fr;
+            }
+
+            .chooseBrokers-content {
+                padding: 60px 0;
+
+                h2 {
+                    @include heading-42;
+                    color: #fff;
+
+                    @media (max-width:576px) {
+                        line-height: 40px;
+                        font-size: 30px;
+                        margin-bottom: 8px;
+                    }
+                }
+
+                p {
+                    @include text-18;
+                    font-weight: normal;
+                    color: #fff;
+                    margin-bottom: 28px;
+
+                    @media (max-width:576px) {
+                        line-height: 24px;
+                        font-size: 16px;
+                    }
+                }
+
+                .chooseBrokers-button {
+
+                    button {
+                        outline: transparent;
+                        color: $text-color-black100;
+                        @include font-14;
+                        text-align: start;
+                        padding: 8px 20px;
+                        background-color: #fff;
+                        border: 1px none transparent;
+                        border-radius: 99px;
+                        overflow: clip;
+                        display: flex;
+                        gap: 10px;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        transition: .3s ease-in-out;
+
+                        span {
+
+                            .learnForexCard-button-arrow {
+                                background-color: $bg-color-black100;
+                                border-radius: 99px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 28px;
+                                height: 28px;
+
+                                svg {
+                                    color: #fff;
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            background-color: $primary-bg-color;
+                        }
+                    }
+                }
+            }
+
+            .chooseBrokers-image {
+                display: flex;
+                align-items: flex-end;
+
+                @media (max-width:576px) {
+                    width: 100%;
+                }
+
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

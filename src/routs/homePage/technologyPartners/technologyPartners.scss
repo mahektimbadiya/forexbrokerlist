@@ -1,0 +1,85 @@
+@use "../../../sass/main.scss" as *;
+@use "../../../sass/theme/theme.scss" as *;
+@use "../../../sass/typography/typography.scss" as *;
+
+.technologyPartners-section {
+    padding: 100px 0;
+
+    @media (max-width:576px) {
+        padding: 64px 0;
+        overflow: hidden;
+    }
+
+    .technologyPartners-conatiner {
+        padding: 0 64px;
+        max-width: 1640px;
+        margin: 0 auto;
+
+        @media (max-width:1024px) {
+            padding: 0 20px;
+        }
+
+        @media (max-width:576px) {
+            padding: 0 16px;
+        }
+
+        .technologyPartners-header {
+            padding: 0 0 48px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width:576px) {
+                padding: 0 0 32px 0;
+                display: block;
+            }
+
+            div {
+
+                h2 {
+                    @include heading-42;
+                    color: $text-color-black100;
+
+                    @media (max-width:1024px) {
+                        max-width: 830.10px;
+                    }
+
+                    @media (max-width:576px) {
+                        line-height: 40px;
+                        font-size: 30px;
+                    }
+                }
+
+                p {
+                    @include text-18;
+                    color: $text-color-black700;
+                    max-width: 650px;
+
+                    @media (max-width:576px) {
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+
+            .technologyPartners-header-button{
+                padding-top: 16px;
+            }
+        }
+
+        .technologyPartners-content {
+            color: $text-color-1f;
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(3, 1fr);
+
+            @media (max-width:1024px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width:576px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@use "../../sass/main.scss" as *;
+@use "../../sass/theme/theme.scss" as *;
+@use "../../sass/typography/typography.scss" as *;
+
+button {
+    @include button-16;
+    transition: .3s ease-in-out;
+
+    span {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &:hover {
+        background-color: $primary-bg-color;
+
+        span {
+            color: $text-color-black100;
+
+            div {
+
+                svg {
+                    color: $text-color-black100;
+                }
+            }
+        }
+    }
+}

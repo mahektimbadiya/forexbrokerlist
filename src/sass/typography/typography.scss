@@ -1,0 +1,119 @@
+@use "../theme/theme.scss" as *;
+
+@mixin heading-1-60 {
+    font-size: 60px;
+    line-height: 70px;
+    color: $text-color-black100;
+    font-weight: 700;
+    z-index: 9;
+    position: relative;
+}
+
+@mixin button-16 {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: start;
+    padding: 10px 20px;
+    background-color: $bg-color-black100;
+    border: 1px solid transparent;
+    border-radius: 99px;
+    overflow: clip;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    z-index: 9;
+    position: relative;
+}
+
+@mixin heading-40 {
+    color: $text-color-black100;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 40px;
+}
+
+@mixin heading-42 {
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 42px;
+}
+
+@mixin fonr-16 {
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+@mixin text-18 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.556;
+}
+
+@mixin font-22 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+}
+
+@mixin font-14 {
+    font-size: 14px;
+    line-height: 1.42857;
+    font-weight: 500;
+}
+
+@mixin font-12 {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.333;
+}
+
+@mixin font-22 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -.222px;
+}
+
+@mixin font-30 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+@mixin font-24 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.333;
+}
+
+@mixin font-20px{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+@mixin font-11px {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+@mixin button-16-white {
+    border: transparent;
+    color: $text-color-black100;
+    font-weight: 540;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: start;
+    padding: 10px 24px;
+    background-color: #fff;
+    border-radius: 99px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
