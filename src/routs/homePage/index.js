@@ -16,13 +16,13 @@ export default function HomePage() {
         <div>
             <HeroSection />
             <MarqueeSlider />
-            <TradingPlatforms />
-            <PremiumForexBrokers />
+            {/* <TradingPlatforms /> */}
+            {/* <PremiumForexBrokers /> */}
             <LearnForex />
-            <TechnologyPartners />
-            <ChooseBrokers />
+            {/* <TechnologyPartners /> */}
+            {/* <ChooseBrokers /> */}
             <TrustedPartners />
-            <TradingBotProvider />
+            {/* <TradingBotProvider /> */}
             <BlogsSection />
             <FrequentlyAskedQuestions />
         </div>

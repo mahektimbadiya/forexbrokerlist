@@ -2,6 +2,7 @@ import React from "react";
 import "./header.scss"
 import ForexBrokerslistlogo from "../../assets/logo/full-logo-dark.svg"
 import { ChevronDown } from "lucide-react";
+import { NavLink } from "react-router";
 
 export default function Header() {
     return (
@@ -14,18 +15,20 @@ export default function Header() {
                         </a>
                     </div>
                     <div className="header-menu-align">
-                        <a>Home</a>
-                        <a>Browse</a>
-                        <a>Brokers</a>
-                        <button>
-                            Tools
-                            <ChevronDown />
-                        </button>
-                        <a>Forex CRM</a>
-                        <a>Advertise</a>
-                        <a>Contact us</a>
-                        <a>News</a>
-                        <a>Expo</a>
+                        <NavLink to={"/"}>Home</NavLink>
+                        <NavLink to={"/browse"}>Browse</NavLink>
+                        <NavLink to={"/brokers"}>Brokers</NavLink>
+                        <NavLink to={"/tools"}>
+                            <button>
+                                Tools
+                                <ChevronDown />
+                            </button>
+                        </NavLink>
+                        <NavLink to={"/learnforex"}>Forex CRM</NavLink>
+                        <NavLink to={"/advertise"}>Advertise</NavLink>
+                        <NavLink to={"/browse"}>Contact us</NavLink>
+                        <NavLink to={"/brokers"}>News</NavLink>
+                        <NavLink to={"/advertise"}>Expo</NavLink>
                     </div>
                     <div className="header-button">
                         <div className="header-button-align">

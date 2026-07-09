@@ -3,9 +3,10 @@
 @use "../../../sass/typography/typography.scss" as *;
 
 .chooseBrokers-section {
-    padding: 0 64px;
+    // padding: 0 64px;
     max-width: 1640px;
     margin: 0 auto;
+    padding-top: 120px;
 
     @media (max-width:1024px) {
         padding: 0 20px;

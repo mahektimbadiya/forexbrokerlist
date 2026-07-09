@@ -85,6 +85,7 @@ header {
                     display: block;
                     cursor: pointer;
                     transition: .3s ease-in-out;
+                    text-decoration: none;
 
                     &:first-child {
                         background-color: $primary-bg-color;
